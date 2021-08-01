@@ -1,17 +1,23 @@
 /*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin editor.
-
-  ==============================================================================
-*/
+ ==============================================================================
+ 
+ This file contains the basic framework code for a JUCE plugin editor.
+ 
+ ==============================================================================
+ */
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
 //==============================================================================
 SimpleEQAudioProcessorEditor::SimpleEQAudioProcessorEditor(SimpleEQAudioProcessor &p)
-    : AudioProcessorEditor(&p), audioProcessor(p)
+: AudioProcessorEditor(&p), audioProcessor(p), peakFreqSliderAttachment(audioProcessor.apvts, "Peak Freq", peakFreqSlider),
+peakGainSliderAttachment(audioProcessor.apvts, "Peak Gain", peakGainSlider),
+peakQualitySliderAttachment(audioProcessor.apvts, "Peak Quality", peakQualitySlider),
+lowCutFreqSliderAttachment(audioProcessor.apvts, "LowCut Freq", lowCutFreqSlider),
+highCutFreqSliderAttachment(audioProcessor.apvts, "HighCut Freq", highCutFreqSlider),
+lowCutSlopeSliderAttachment(audioProcessor.apvts, "LowCut Slope", lowCutSlopeSlider),
+highCutSlopeSliderAttachment(audioProcessor.apvts, "HighCut Slope", highCutSlopeSlider)
 {
   // Make sure that before the constructor has finished, you've set the
   // editor's size to whatever you need it to be.
@@ -20,7 +26,7 @@ SimpleEQAudioProcessorEditor::SimpleEQAudioProcessorEditor(SimpleEQAudioProcesso
   {
     addAndMakeVisible(comp);
   }
-
+  
   setSize(600, 400);
 }
 
@@ -33,10 +39,10 @@ void SimpleEQAudioProcessorEditor::paint(juce::Graphics &g)
 {
   // (Our component is opaque, so we must completely fill the background with a solid colour)
   g.fillAll(getLookAndFeel().findColour(juce::ResizableWindow::backgroundColourId));
-
+  
   g.setColour(juce::Colours::white);
   g.setFont(15.0f);
-//  g.drawFittedText("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
+  //  g.drawFittedText("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void SimpleEQAudioProcessorEditor::resized()

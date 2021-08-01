@@ -4,7 +4,7 @@
   <FILTER uid="1" x="0.5" y="0.1">
     <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uid="246006c0" isInstrument="0"
-            fileTime="0" infoUpdateTime="0" numInputs="0" numOutputs="1"
+            fileTime="0" infoUpdateTime="0" numInputs="0" numOutputs="2"
             isShell="0"/>
     <STATE>0.</STATE>
     <LAYOUT>
@@ -12,7 +12,7 @@
         <BUS index="0" layout="disabled"/>
       </INPUTS>
       <OUTPUTS>
-        <BUS index="0" layout="C"/>
+        <BUS index="0" layout="L R"/>
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
@@ -34,12 +34,12 @@
   <FILTER uid="3" x="0.5" y="0.9">
     <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uid="724248cb" isInstrument="0"
-            fileTime="0" infoUpdateTime="0" numInputs="1" numOutputs="0"
+            fileTime="0" infoUpdateTime="0" numInputs="2" numOutputs="0"
             isShell="0"/>
     <STATE>0.</STATE>
     <LAYOUT>
       <INPUTS>
-        <BUS index="0" layout="C"/>
+        <BUS index="0" layout="L R"/>
       </INPUTS>
       <OUTPUTS>
         <BUS index="0" layout="disabled"/>
@@ -65,9 +65,9 @@
           uiLastY_Normal="443" uiopen_Normal="0">
     <PLUGIN name="AUAudioFilePlayer" format="AudioUnit" category="Generator"
             manufacturer="Apple" version="1.6.0" file="AudioUnit:Generators/augn,afpl,appl"
-            uid="6163676e" isInstrument="0" fileTime="0" infoUpdateTime="17afec9a219"
+            uid="6163676e" isInstrument="0" fileTime="0" infoUpdateTime="17aff03af54"
             numInputs="0" numOutputs="2" isShell="0"/>
-    <STATE>762.hAGaoMGcv.C1AHv.DTfAGfPBJr.IkXxIpvUag4VclE1XzUmbkIGUjEFcg8EDarVPUAkbkMWYzAUYxMWZyQWYtQ2TzEFcksTY4c0b0IFc4AWYWYWYxMWZu4FUzkGbk8EDOXVZrUVKxUlYkIWYtMVYyQkag0VYRDFbvwFPhxfFR2fCO.AVFkFak4TXsU1URU1Yo8lay8ED37RUyUlby8BcoE1YuklagMVZu8BQucmar8VXjM2K2UFcxElayYVYx0RMkkCYvH1KTUzTTUjK2ElcgFA0RLAEUXwEXjgWRU1Yo8laD8VYywzauAmVRU1Yo8laDEFcg8EDPjzbSUFakMFckQlTkcVZu4lVRU1Yo8laNEVakgvSP.G..............HL.....................fMtQAA...........Df.CPPAFb.BInvBLzfCOD.................................................3CBL..........fmtlB..fOGPInkSkcGHRU1Yo8laS2fCavQGX3URyMUYrU1XzUFYFkFak8EDk7RUyUlby8BcoE1Yu4RZtE1Xo81KD81X00VYtQ2bu.CL23RavMSndPsDSPQEV.BFhfvSP.G.....................fmiXo6+e...H.........fJ.........fL3vSn7e...H4HV59+G..D....f++A.......................................3+eAD............XxoBf++A..InkSkcGHRU1Yo8laIHQXlAGaP.fDgU2YtIMJo7.GVYTZrUFHwXkQowVYfHCVU4FcoQGakQF.H.PF.XB.q.PR.DE.YAfW..G.0Afd.rG.9Avf.vH.TBvy.DM.ZCP5.Pe.GDfDALQ.FFvgAHY.YF.pA.c.RGv1Avs.OI.TBrk.bIPXBLl.nIPaBPm.6A.......HP..........rB..................H.g</STATE>
+    <STATE>762.hAGaoMGcv.C1AHv.DTfAGfPBJr.IkXxIpvUag4VclE1XzUmbkIGUjEFcg8EDarVPUAkbkMWYzAUYxMWZyQWYtQ2TzEFcksTY4c0b0IFc4AWYWYWYxMWZu4FUzkGbk8EDOXVZrUVKxUlYkIWYtMVYyQkag0VYRDFbvwFPhxfFR2fCO.AVFkFak4TXsU1URU1Yo8lay8ED37RUyUlby8BcoE1YuklagMVZu8BQucmar8VXjM2K2UFcxElayYVYx0RMkkCYvH1KTUzTTUjK2ElcgFA0RLAEUXwEXjgVRU1Yo8laNEVakokTkcVZu4FQgQWXeAADIM2TkwVYiQWYjIUYmk1at4kTkcVZu4FQuU1bL81avokSkcGHRU1Yo8laOAAb..............fv......................13FED...........P.BL.AEXvAHjfBKvPCN7P.................................................fOHv...........d5ZJ...9b.k.BS2fCavQGX3URyMUYrU1XzUFYFkFak8EDk7RUyUlby8BcoE1Yu4RZtE1Xo81KD81X00VYtQ2bu.CL23RavMSndPsDSPQEe.BFYnkSkcGHRU1Yo8laOAAb......................dNhkt++A..f..........p..........xfCOgx+A..fjiXo6+e..P.....9+G.......................................f++EP............fImJ.9+G..j.BIHQXlAGaP.fDgU2YtIMJo7.GVYTZrUFHwXkQowVYfHCVU4FcoQGakQF.H.PF.XB.q.PR.DE.YAfW..G.0Afd.rG.9Avf.vH.TBvy.DM.ZCP4..e.CDfDAzQ.PFPjAHY.YF.pA.c.RGv1AXt.YIfVBrk.bIPXBLl.nIPaBPm.6A.......HP..........rB..................H.g</STATE>
     <LAYOUT>
       <INPUTS/>
       <OUTPUTS>
@@ -79,7 +79,7 @@
           uiopen_Normal="0">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="1.0.0" file="/Users/tiago.inacio/Library/Audio/Plug-Ins/VST3/SimpleEQ.vst3"
-            uid="acf3f0a8" isInstrument="0" fileTime="17ae7afc8f4" infoUpdateTime="17afec9a21a"
+            uid="acf3f0a8" isInstrument="0" fileTime="17ae7afc8f4" infoUpdateTime="17aff03af54"
             numInputs="2" numOutputs="2" isShell="0"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>
@@ -94,5 +94,5 @@
   <CONNECTION srcFilter="6" srcChannel="0" dstFilter="7" dstChannel="0"/>
   <CONNECTION srcFilter="6" srcChannel="1" dstFilter="7" dstChannel="1"/>
   <CONNECTION srcFilter="7" srcChannel="0" dstFilter="3" dstChannel="0"/>
-  <CONNECTION srcFilter="7" srcChannel="1" dstFilter="3" dstChannel="0"/>
+  <CONNECTION srcFilter="7" srcChannel="1" dstFilter="3" dstChannel="1"/>
 </FILTERGRAPH>
