@@ -39,6 +39,10 @@ enum ChainPositions
     HighCut
 };
 
+using Coefficients = Filter::CoefficientsPtr;
+void updateCoefficients(Coefficients &old, const Coefficients &replacements);
+
+Coefficients makePeakFilter(const ChainSettings &chainSettings, double sampleRate);
 
 //==============================================================================
 /**
@@ -88,14 +92,9 @@ public:
   juce::AudioProcessorValueTreeState apvts{*this, nullptr, "Parameters", createParameterLayout()};
 
 private:
-    
-    using Coefficients = Filter::CoefficientsPtr;
-    
     MonoChain leftChain, rightChain;
 
     void updatePeakFilter(const ChainSettings& chainSettings);
-    
-    static void updateCoefficients(Coefficients &old, const Coefficients &replacements);
     
     template<int Index, typename ChainType, typename CoefficientType>
     void update(ChainType &chain, CoefficientType &coefficients)
