@@ -66,10 +66,10 @@ void RotarySliderWithLabels::paint(juce::Graphics &g) {
   auto sliderBounds = getSliderBounds();
   auto normalizedValues = jmap(getValue(), range.getStart(), range.getEnd(), 0.0, 1.0);
 
-  g.setColour(Colours::red);
-  g.drawRect(getLocalBounds());
-  g.setColour(Colours::yellow);
-  g.drawRect(sliderBounds);
+//  g.setColour(Colours::red);
+//  g.drawRect(getLocalBounds());
+//  g.setColour(Colours::yellow);
+//  g.drawRect(sliderBounds);
 
 
   getLookAndFeel().drawRotarySlider(
@@ -102,7 +102,35 @@ juce::Rectangle<int> RotarySliderWithLabels::getSliderBounds() const {
 }
 
 juce::String RotarySliderWithLabels::getDisplayString() const {
-  return juce::String(getValue());
+  if (auto *choiceParam = dynamic_cast<juce::AudioParameterChoice*>(param)) {
+    return choiceParam->getCurrentChoiceName();
+  }
+
+  juce::String str;
+
+  bool addK = false;
+
+  if (auto *floatParam = dynamic_cast<juce::AudioParameterFloat*>(param)) {
+    float val = getValue();
+
+    if (val > 999.f) {
+      val = val / 1000.f;
+      addK = true;
+    }
+
+    str = juce::String(val, (addK ? 2 : 0));
+  } else {
+    jassertfalse; // this shouldn't happen because we only have float audio params
+  }
+
+  if (suffix.isNotEmpty()) {
+    str << " ";
+    if (addK) {
+      str << "k";
+    }
+    str << suffix;
+  }
+  return str;
 }
 
 // ==============================================================================
